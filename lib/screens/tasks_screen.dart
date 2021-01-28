@@ -41,6 +41,10 @@ class TasksScreen extends StatelessWidget {
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.yellow,
+        child: Icon(Icons.add,color: Colors.black,),
+      ),
     );
   }
 }
