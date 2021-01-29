@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:flutter_provider_todo/main.dart';
-import 'package:circular_check_box/circular_check_box.dart';
+import 'package:flutter_provider_todo/widgets/task_list.dart';
 
-class TasksScreen extends StatefulWidget {
-  @override
-  _TasksScreenState createState() => _TasksScreenState();
-}
 
-class _TasksScreenState extends State<TasksScreen> {
-  bool selected = true ;
+
+class TasksScreen extends StatelessWidget {
+
 
   @override
   Widget build(BuildContext context) {
@@ -51,33 +48,7 @@ class _TasksScreenState extends State<TasksScreen> {
           Expanded(
             child: Padding(
               padding: const EdgeInsets.only(left: 10),
-              child: ListView(
-                children: <Widget>[
-                  ListTile(
-                    title: Text(
-                      "Go to the gym",
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500,
-                        decoration:(selected) ? TextDecoration.lineThrough: null
-                      ),
-                    ),
-                    leading: CircularCheckBox(
-                      value: this.selected,
-                      checkColor: Colors.black,
-                      activeColor: Colors.yellow,
-                      inactiveColor: Colors.grey,
-                      disabledColor: Colors.yellow,
-                      onChanged: (val){
-                        this.setState(() {
-                          this.selected= !this.selected;
-                        });
-                      },
-                    ),
-                  ),
-
-                ],
-              ),
+              child: TaskList(),
             ),
           )
         ],
@@ -95,3 +66,6 @@ class _TasksScreenState extends State<TasksScreen> {
     );
   }
 }
+
+
+
