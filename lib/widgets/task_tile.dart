@@ -14,7 +14,7 @@ class _TaskTileState extends State<TaskTile> {
   Widget build(BuildContext context) {
     return ListTile(
       title: Text(
-        "Go to the gym",
+        "Get Sh*t done",
         style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.w500,
